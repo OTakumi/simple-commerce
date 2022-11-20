@@ -1,6 +1,6 @@
-import type {AppProps} from 'next/app'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 // Global sryle
 const GlobalStyle = createGlobalStyle`
@@ -29,22 +29,23 @@ ol, ul {
 }
 `
 
-const MyApp = ({Component, pageProps}: AppProps) => {
-	return (
-		<>
-			<Head>
-				<meta key="charset" content="utf-8" />
-				<meta
-					key="viewport"
-					name="viewport"
-					content="width=device-width, initial-scale=1, shrink-to-fit=no, maxmum-scale=5" />
-				<meta property="og:locale" content="ja-JP" />
-				<meta property="og:type" content="website" />
-			</Head>
-			<GlobalStyle />
-			<Component {...pageProps} />
-		</>
-	)
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <>
+      <Head>
+        <meta key="charset" content="utf-8" />
+        <meta
+          key="viewport"
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maxmum-scale=5"
+        />
+        <meta property="og:locale" content="ja-JP" />
+        <meta property="og:type" content="website" />
+      </Head>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
