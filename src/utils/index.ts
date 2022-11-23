@@ -9,7 +9,7 @@ export const fetcher = async (
     // Throws an exception when the response fails
     const errRes = await res.json()
     const error = new Error(
-      errRes.message ?? "An error occurred during the API request.",
+      errRes.message ?? 'An error occurred during the API request.',
     )
 
     throw error

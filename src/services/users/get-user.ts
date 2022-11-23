@@ -1,10 +1,10 @@
-import type {ApiContext, User} from 'types'
-import {fetcher} from 'utils'
+import type { ApiContext, User } from 'types/data'
+import { fetcher } from 'utils'
 
 export type GetUserParams = {
   /**
-  * User ID
-  **/
+   * User ID
+   **/
   id: number
 }
 
@@ -13,15 +13,14 @@ export type GetUserParams = {
  * @params context: API context
  * @params params: parameter
  * @return User
-**/
+ **/
 
 const getUser = async (
-  context: ApiContext,
-  {id}: GetUserParams,
-): Promise<User> => {
-
+  context: typeof ApiContext,
+  { id }: GetUserParams,
+): Promise<typeof User> => {
   return await fetcher(
-    '${context.apiRootUrl.replace(/\/$/g, ")/users/${id}}',
+    '${context.apiRootUrl.replace(//$/g, &quot;)/users/${id}}',
     {
       headers: {
         Accept: 'application/json',
