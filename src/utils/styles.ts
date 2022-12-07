@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
-import {theme} from 'themes'
-import type {ResponsiveProp, Responsive} from 'types'
+import { theme } from 'themes'
+import type { ResponsiveProp, Responsive } from 'types'
 
 // Type of theme
 export type AppTheme = typeof theme
@@ -20,7 +20,7 @@ export type LetterSpacing = LetterSpacingThemeKeys | (string & {})
 export type LineHeight = LineHeightThemeKeys | (string & {})
 
 // Break point
-const BREAKPOINTS: {[key: string]: string} = {
+const BREAKPOINTS: { [key: string]: string } = {
   sm: '640px',
   md: '768px',
   lg: '1024px',
