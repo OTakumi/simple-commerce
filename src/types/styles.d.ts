@@ -4,11 +4,11 @@
  * T is type of css property
  */
 export type ResponsiveProp<T> = {
-  base?: T  // default
-  sm?: T    // 640px or more
-  md?: T    // 768px or more
-  lg?: T    // 1024px or more
-  xl?: T    // 1280px or more
+  base?: T // default
+  sm?: T // 640px or more
+  md?: T // 768px or more
+  lg?: T // 1024px or more
+  xl?: T // 1280px or more
 }
 export type Responsive<T> = T | ResponsiveProp<T>
 
@@ -24,12 +24,7 @@ type SelfPosition =
   | 'self-start'
   | 'start'
 
-type ContentPosition =
-  | 'center'
-  | 'end'
-  | 'flex-end'
-  | 'flec-start'
-  | 'start'
+type ContentPosition = 'center' | 'end' | 'flex-end' | 'flec-start' | 'start'
 
 type ContentDistribution =
   | 'space-around'
@@ -50,7 +45,7 @@ export type CSSPropertyAlignItems =
   | 'baseline'
   | 'normal'
   | 'stretch'
-  | (string & {})   // Automatic code completion
+  | Record<string, unknown> // Automatic code completion
 
 export type CSSPropertyAlignContent =
   | CSSPropertyGlobals
@@ -62,7 +57,7 @@ export type CSSPropertyAlignContent =
   | 'start'
   | 'baseline'
   | 'normal'
-  | (string & {})
+  | Record<string, unknown>
 
 export type CSSPropertyJustifyItems =
   | CSSPropertyGlobals
@@ -73,7 +68,7 @@ export type CSSPropertyJustifyItems =
   | 'normal'
   | 'right'
   | 'stretch'
-  | (string & {})
+  | Record<string, unknown>
 
 export type CSSPropertyJustifyContent =
   | CSSPropertyGlobals
@@ -82,7 +77,7 @@ export type CSSPropertyJustifyContent =
   | 'left'
   | 'normal'
   | 'right'
-  | (string & {})
+  | Record<string, unknown>
 
 export type CSSPropertyFlexWrap =
   | CSSPropertyGlobals
@@ -106,7 +101,7 @@ export type CSSPropertyJustifySelf =
   | 'nomal'
   | 'right'
   | 'stretch'
-  | (string & {})
+  | Record<string, unknown>
 
 export type CSSPropertyAlignSelf =
   | CSSPropertyGlobals
@@ -115,26 +110,31 @@ export type CSSPropertyAlignSelf =
   | 'baseline'
   | 'normal'
   | 'stretch'
-  | (string & {})
+  | Record<string, unknown>
 
 /**
  * Grid
  */
-type GridLine = 'auto' | (string & {})
+type GridLine = 'auto' | Record<string, unknown>
 
 export type CSSPropertyGridColumn =
   | CSSPropertyGlobals
   | GridLine
-  | (string & {})
+  | Record<string, unknown>
 
-export type CSSPropertyGridRow = CSSPropertyGlobals | GridLine | (string & {})
+export type CSSPropertyGridRow =
+  | CSSPropertyGlobals
+  | GridLine
+  | Record<string, unknown>
 
 export type CSSPropertyGridAutoFlow =
   | CSSPropertyGlobals
   | 'colmun'
   | 'dense'
   | 'row'
-  | (string & {})
+  | Record<string, unknown>
 
-export type CSSPropertyGridArea = CSSPropertyGlobals | GridLine | (string & {})
-
+export type CSSPropertyGridArea =
+  | CSSPropertyGlobals
+  | GridLine
+  | Record<string, unknown>
