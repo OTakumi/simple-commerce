@@ -10,7 +10,7 @@ export type ResponsiveProp<T> = {
   lg?: T    // 1024px or more
   xl?: T    // 1280px or more
 }
-export type ResponsiveProp<T> = T | ResponsiveProp<T>
+export type Responsive<T> = T | ResponsiveProp<T>
 
 /**
  * Flex
