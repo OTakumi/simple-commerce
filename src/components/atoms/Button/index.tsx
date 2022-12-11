@@ -101,19 +101,19 @@ const variants = {
  * Button
  * @param variant, color, typo, border, layout, space
  */
-const Button = styled.button<ButtonProps> `
+const Button = styled.button<ButtonProps>`
 	${({variant, color, backgroundColor, pseudoClass, theme}) => {
 		// apply style of variant
 		if (variant && variants[variant]) {
 			const styles = []
-			!color && styles.push(toPropValue('color', variants[variant].color, theme),)
+			!color && styles.push(toPropValue('color', variants[variant].color, theme))
 			!backgroundColor &&
-				styles.push(toPropValue('color', variants[variant].color, theme),)
+				styles.push(toPropValue('background-color', variants[variant].backgroundColor, theme),)
 			!pseudoClass &&
 				styles.push(
 					`&: hover{
 						${toPropValue(
-						'backgroundColor',
+						'background-color',
 						variants[variant].pseudoClass.hover.backgroundColor,
 						theme,
 					)}
@@ -123,7 +123,7 @@ const Button = styled.button<ButtonProps> `
 				styles.push(
 					`&:disabled {
 						${toPropValue(
-						'backgroundColor',
+						'background-color',
 						variants[variant].pseudoClass.disabled.backgroundColor,
 						theme,
 					)}
